@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { profile } from '../data/profile';
 
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -23,9 +24,9 @@ function Contact() {
         <article className="glass rounded-2xl p-6">
           <h2 className="section-title">Contact</h2>
           <div className="mt-4 space-y-2 text-sm text-slate-300">
-            <p>Email: <a href="mailto:mahi.srivastava.qa@example.com" className="text-cyan">mahi.srivastava.qa@example.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/mahisrivastava" className="text-cyan">linkedin.com/in/mahisrivastava</a></p>
-            <p>Phone: +91 98765 43210</p>
+            <p>Email: <a href={`mailto:${profile.email}`} className="text-cyan">{profile.email}</a></p>
+            <p>LinkedIn: <a href={profile.linkedin} className="text-cyan">{profile.linkedin.replace('https://', '')}</a></p>
+            <p>Phone: {profile.phone}</p>
           </div>
         </article>
         <form onSubmit={handleSubmit} className="glass rounded-2xl p-6">

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { profile } from '../data/profile';
 
 function Hero() {
   return (
@@ -8,17 +9,17 @@ function Hero() {
       </div>
       <div className="mx-auto grid w-[min(1120px,92vw)] gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-center">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          <p className="mb-3 text-xs uppercase tracking-[0.24em] text-cyan">Senior QA Engineer • Revenue Guardrail</p>
+          <p className="mb-3 text-xs uppercase tracking-[0.24em] text-cyan">{profile.role} • Revenue Guardrail</p>
           <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
             QA Engineer Who Protects Revenue, Not Just Finds Bugs.
           </h1>
           <p className="mt-5 max-w-xl text-slate-300">
-            Senior QA Engineer owning end-to-end quality across multi-tenant restaurant SaaS platforms.
+            {profile.role} owning end-to-end quality across multi-tenant restaurant SaaS platforms.
           </p>
           <div className="mt-6 grid gap-2 text-sm text-slate-300 sm:grid-cols-3">
-            <span>Name: Mahi Srivastava</span>
-            <span>Role: QA Engineer</span>
-            <span>Location: Gujarat, India</span>
+            <span>Name: {profile.name}</span>
+            <span>Role: {profile.role}</span>
+            <span>Location: {profile.location}</span>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#projects" className="rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white shadow-glow transition hover:-translate-y-0.5">
