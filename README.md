@@ -1,21 +1,69 @@
-# Portfolio Website
+# Mahi Srivastava - QA Engineer Portfolio
 
-A clean, responsive single-page portfolio built from resume content.
+A modern, production-ready personal portfolio built with **React + Vite**, **Tailwind CSS**, and **Framer Motion**. The UI is dark-first, mobile-first, and focused on revenue-critical QA ownership for restaurant SaaS systems.
 
-## Customize with your details
+## Tech Stack
 
-Update these placeholders in `index.html`:
+- React 18 (Vite)
+- Tailwind CSS
+- Framer Motion
+- React Icons
 
-- `Your Name`
-- Role/title in hero section
-- Summary in **About Me**
-- Experience bullets in **Experience**
-- Projects in **Projects**
-- Skill list
-- Contact email
+## Local Development
 
-Optional: place your resume at `resume.pdf` in the project root so the download button works.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start development server:
+   ```bash
+   npm run dev
+   ```
+3. Open `http://localhost:5173`.
 
-## Run locally
+## Production Build
 
-Open `index.html` directly in a browser, or run a static file server.
+```bash
+npm run build
+npm run preview
+```
+
+## Deployment (Vercel)
+
+1. Push repository to GitHub.
+2. Import project in Vercel.
+3. Keep defaults:
+   - Framework Preset: `Vite`
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+4. Deploy.
+
+## Folder Structure
+
+```txt
+src/
+  components/
+    Navbar.jsx
+    Hero.jsx
+    About.jsx
+    Expertise.jsx
+    Projects.jsx
+    Philosophy.jsx
+    Metrics.jsx
+    RiskSimulator.jsx
+    Lifecycle.jsx
+    Tools.jsx
+    Contact.jsx
+    Footer.jsx
+  data/
+    content.js
+  App.jsx
+  index.css
+  main.jsx
+```
+
+## Notes
+
+- Personal profile data (name, role, location, contact links) is centralized in `src/data/profile.js` for quick edits.
+- Place a real resume PDF at `public/assets/mahi-srivastava-resume.pdf`.
+- Contact form currently validates client-side and is ready to connect to an API endpoint.
