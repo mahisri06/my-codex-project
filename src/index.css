@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-base text-slate-100 antialiased;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-image: radial-gradient(circle at top right, #241d4f 0%, #060816 46%);
+}
+
+.glass {
+  @apply border border-white/15 bg-panel backdrop-blur-md;
+}
+
+.section-title {
+  @apply text-2xl font-semibold tracking-tight md:text-3xl;
+}
